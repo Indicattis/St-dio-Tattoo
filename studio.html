@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/studio.css">
+    <link rel="stylesheet" href="./css/el.css">
+    <script src="https://kit.fontawesome.com/a0544da68a.js" crossorigin="anonymous"></script>
+    <title>William Boeira Tattoo</title>
+</head>
+<body>
+    <div id="vanta--background"></div>
+    
+    <header id="header--menu">
+        <nav class="header--menu--navbar" id="navbar--first">
+            <main>
+                <div id="header--menu--navbar--title">
+                    <h3>William Boeira Tattoo</h3>
+                </div>
+            <div class="header--menu--navbar--network">
+                <ul>
+                    <li><i class="	fab fa-facebook-f"></i></li>
+                    <a href="https://www.instagram.com/williamboeira_tattoo/"><li class="midiaItem"><i class="	fab fa-instagram"></i></li></a>
+                    <li><i class="	fab fa-twitter"></i></li>
+                    <li><i class="	fab fa-youtube"></i></li>
+                </ul>
+            </div>
+        </main>
+        </nav>
+        <nav class="header--menu--navbar" id="navbar--second">
+            <main>
+                <ul>
+                    <li><a href="./index.html"> Início</a></li>
+                    <li><a href="./agenda.php"> Agenda</a></li>
+                    <li><a href="#"> Artes</a></li>
+                    <li><a href="#"> Contato</a></li>
+                    <li><a href="./studio.html">Tattoo Studio </a><h4 class="span--gold">EXPERIMENTE!</h4></li>
+                </ul>
+                <div class="header--menu--navbar--acount toggle--mod--sign">
+                    <a class="toggle--mod--sign" href="#">Conta</a>
+                    <i class="fa-sharp fa-solid fa-user toggle--mod--sign"></i>
+                </div>
+            </main>
+        </nav>
+        <nav class="header--menu--navbar--mobile">
+            <div class="menu--mobile">
+                <section class="menu--mobile--acount">
+                        <div>
+                            <a href="">
+                            <i class="fa-solid fa-user"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <p>João Indicatti</p>
+                            <p>joao.staehler@gmail.com</p>
+                        </div>
+                        <div>
+                            <a href="">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            </a>
+                        </div>
+                </section>
+                <section class="menu--mobile--navbar">
+                    <div>
+                        <a href="./studio.html">
+                        <legend>Tattoo Stúdio</legend>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="./agenda.php">
+                        <legend>Agendamento</legend>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                        <legend>Artes</legend>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                        <legend>Contato</legend>
+                        </a>
+                    </div>
+                </section>
+                <section class="menu--mobile--links">
+                    <div>
+                        <a href="./index.html">
+                            <i class="fa-solid fa-house"></i>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <i class="fa-regular fa-moon"></i>
+                        </a>
+                    </div>
+                    <div class="menu--mobile--toggle">
+                        <a href="#" class="menu--mobile--toggle">
+                            <i class="fa-solid fa-bars menu--mobile--toggle"></i>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </nav>
+    </header>
+    <section id="studio--content">
+        <main>
+            <section id="studio--instructions">
+                <h1>Bem vindo ao Tattoo Stúdio!</h1>
+                <p>Preparado para customização?</p>
+                <button class="button--download" id="studio--goto--studio">Avançar <i class="fa-solid fa-forward"></i></button>
+            </section>
+            <section class="studio--tattoo">
+                <section class="studio--options">
+                    <div class="studio--select--body">
+                        <i class="fa-solid fa-child"></i>
+                        <select name="Local" id="studio--select--body">
+                            <option value="default" selected>Selecione a parte do corpo</option>
+                            <option value="arm--1">Braço Posterior</option>
+                            <option value="arm--2">Braço Inferior</option>
+                            <option value="arm--3">Antebraço Posterior</option>
+                            <option value="arm--4">Antebraço Inferior</option>
+                            <option value="body--1">Tronco</option>
+                            <option value="body--2">Costas</option>
+                            <option value="leg--1">Perna</option>
+                            <option value="leg--2">Panturrilha</option>
+                            <option value="leg--3">Coxa Frontal</option>
+                            <option value="leg--4">Coxa Trazeira</option>
+                            <option value="foot--1">Pé</option>
+                            <option value="head--1">Ombro</option>
+                            <option value="head--2">Nuca</option>
+                            <option value="head--3">Rosto</option>
+                        </select>
+                    </div>
+                    <button class="button" id="studio--select--image">
+                        <input type="file" id="photo-file">
+                        <h5>Importar</h5>
+                        <i class="fa-solid fa-folder-open"></i>
+                    </button>
+                    <button class="button--download" id="studio--download--preview">
+                       <h5>Baixar Projeto</h5>  <i class="fa-solid fa-file-arrow-down"></i>
+                    </button>
+                    <button class="button--submit" id="studio--agendamento--link">
+                        <h5>Agendamento</h5>  <i class="fa-solid fa-calendar-plus"></i>
+                    </button>
+                    <button class="button" id="studio--opt--zoom--in">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </button>
+                    <button class="button" id="studio--opt--zoom--out">
+                        <i class="fa-solid fa-magnifying-glass-minus"></i>
+                    </button>
+                    
+                <div class="clear"></div>
+                </section>
+                <!-- ESPAÇO DE EDIÇÃO DA IMAGEM -->
+                <section id="studio--photo--space">
+                    <div id="studio--photo--background--space">
+                        <img id="studio--photo--background" src="./img/bodyparts/default.png" alt="" draggable="false">
+                        <canvas id="canvas"></canvas>
+                    </div>
+                    <div class="studio--photo--space--controls">
+                        <section class="photo--controls">
+                            <button class="button" id="photo--control--up"><i class="fa-solid fa-caret-up"></i></button>
+                            <button class="button" id="photo--control--right"><i class="fa-solid fa-caret-right"></i></button>
+                            <button class="button" id="photo--control--left"><i class="fa-solid fa-caret-left"></i></button>
+                            <button class="button" id="photo--control--down"><i class="fa-solid fa-caret-down"></i></button>
+                        </section>
+                    </div>
+                </section>
+                <section class="studio--options">
+                    <button class="button" id="studio--opt--rotate--left">
+                        <i class="fa-solid fa-arrow-rotate-left"></i>
+                    </button>
+                    <button class="button" id="studio--opt--rotate--right">
+                        <i class="fa-solid fa-arrow-rotate-right"></i>
+                    </button>
+                    <!-- <button class="button" id="studio--opt--mirror">
+                        <img src="./img/mirror.png" alt="">
+                    </button> -->
+                    <input type="hidden" name="" id="filter--checkbox--hidden">
+                    <button class="button" id="studio--opt--filter">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </button>
+                    <button class="button" id="studio--opt--filter--off">
+                        <i class="fa-solid fa-wand-magic"></i>
+                    </button>
+                    <button class="button" id="studio--show--price">
+                        R$ 0,00
+                    </button>
+                    <button class="button" id="studio--dimension--image">
+                        <label for="">Tamanho:</label>
+                        <input type="range" class="resizer__input resizer__input--width" min="200"  max="3000">
+                        <input type="hidden" class="resizer__input resizer__input--height" min="200"  max="3000">
+                        <label for="" id="studio--show--height">
+                            0cm
+                        </label>
+                    </button>
+                </section>
+            </section>
+        </main>
+    </section>   
+    <section class="studio--modals">
+        <section id="studio--modal--project--preview">
+            <div class="project--preview--case">
+                <i class="fa-regular fa-circle-xmark" id="project--preview--close"></i>
+                <legend>Pré-Visualização do Projeto</legend>
+                <div id="project--preview--print">
+                    
+                </div>
+                <button class="button--download" id="download--project--file">
+                    Download Project
+                </button>
+            </div>
+        </section>
+    </section>
+    
+    <label>
+        <input type="hidden" class="resizer__aspect" checked>
+    </label>
+</body>
+<script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="./js/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="./js/slick.min.js"></script>
+<script type="text/javascript" src="./js/studio.js"></script>
+<script type="text/javascript" src="./js/script.js"></script>
+<script src="./js/three.r134.min.js"></script>
+<script src="./js/vanta.dots.min.js"></script>
+<script>
+VANTA.DOTS({
+  el: "#vanta--background",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 1000.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  size: 2.50,
+  spacing:7,
+  showLines: false,
+  color: 0x4f84da,
+  color2: 0x4f84da,
+  backgroundColor: 0x14111e,
+})
+</script>
+</html>

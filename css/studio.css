@@ -1,0 +1,304 @@
+@keyframes modal {
+    from {
+        transform: translateY(-50%);
+        opacity: 0;
+        pointer-events: none;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+@keyframes change--background--color {
+    0% {
+        background-color: #000;
+    }
+    50% {
+        background-color: #1c1b1f;
+    }
+    100% {
+        background-color: #000;
+    }
+}
+body {
+    overflow: hidden;
+} 
+/* #vanta--background {
+    height: 100vh;
+} */
+
+button {
+    cursor: pointer;
+    min-width: 0px !important;
+    font-size: 16px;
+    padding: 0px 20px 0px 20px; 
+    border-radius: 3px;   
+    border: 1px solid #e2e2e2;
+    text-align: center;
+    margin: 5px;
+    line-height:33px;
+    color: white !important;
+}
+#studio--instructions {
+    margin-top: 50px;
+    position: absolute;
+    height: 80vh;
+    background-color: transparent;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: white;
+}
+#studio--instructions h1 {
+    font-size: 3rem;
+}
+#studio--instructions.off {
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s;
+}
+.studio--tattoo {
+    padding-top: 5px;
+    overflow: hidden;
+    width: 950px;
+    border-radius: 3px;
+    box-shadow: 0 1px 10px 0 #fff;
+    position: absolute;
+    left: 1500px;
+    opacity: 0;
+    pointer-events: none;
+}
+.studio--tattoo.show {
+    left: 50%;
+    top: 57%;
+    transform: translate(-50%,-50%);
+    transition: all .6s;
+    opacity: 1;
+    pointer-events: all;
+}
+#photo-file {
+    display: none;
+}
+.studio--options {
+    position: relative;
+    z-index: 9000;
+    overflow: hidden !important;
+    background-color: rgba(240, 248, 255, 0.068);
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.studio--options input[type=range] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 150px;
+    height: 0.5em;
+    border-radius: 5px;
+    background-color: #ae833f;
+    outline: none;
+    margin-left: 20px;
+}
+.studio--options label {
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+#studio--photo--space {
+    display: flex;
+    position: relative !important;
+    padding: 10px;
+    overflow: hidden !important;    
+    background-color: rgba(240, 248, 255, 0.068);
+    height: 60vh;
+
+}
+#studio--photo--background {
+    object-fit: contain !important;
+    height: 100%;
+}
+#studio--photo--background--space {
+    position: relative;
+    overflow: hidden;
+}
+#canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: crosshair;
+    overflow: hidden !important;
+    transition-duration: all 0.4s;
+}
+
+.studio--photo--space--controls {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    width: 100px;
+    height: 100px;
+    opacity: 0.8;
+}
+.studio--photo--space--controls:hover {
+    opacity: 1;
+    transition: all 0.3s;
+}
+.photo--controls {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+    grid-gap: 0px;
+    transform: rotate(45deg);
+}
+.photo--controls button {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 41px;
+    width: 41px;
+}
+.photo--controls button i {
+    transform: rotate(-45deg);
+}
+.studio--options h5 {
+    margin-right: 5px;
+    float: left;
+}
+.studio--select--body i{
+    font-size: 16px;
+    color: #fff;
+    position: absolute;
+    padding: 12px 20px 8px 24px;
+    pointer-events: none;
+    display: none;
+}
+#studio--show--height {
+    margin-left: 10px;
+}
+/* MODAL */
+
+#studio--modal--project--preview {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #1c1b1f7a;
+    z-index: 9001;
+    font-size: 1.6rem;
+    transform: translateY(-50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+
+}
+#studio--modal--project--preview.show {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.3s;
+}
+#project--preview--close {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 10px;
+}
+.project--preview--case {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 600px;
+    background-color: #fff;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.project--preview--case i {
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+.project--preview--case canvas {
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 520px;
+}
+/* MOBILE */
+
+@media(max-width: 900px) {
+    .studio--tattoo {
+        width: 100%;
+    }
+    /* .studio--options {
+        width:80px !important;
+        display: flex;
+        justify-content: center;
+        align-content: flex-start;
+    } */
+}
+@media(max-width:850px) {
+
+    .studio--options h5 {
+        display: none;
+    }
+}
+@media(max-width:630px) {
+    .studio--tattoo {
+        top: 65%;
+    }
+    #studio--select--body {
+        width: 98% !important;
+        padding: 6px 20px 6px 20px !important;
+        line-height: 45px !important;
+        border: 1px solid #e2e2e2;
+        border-radius: 3px;
+        margin-bottom: 5px;
+    }
+    .studio--select--body {
+        width: 98% !important;
+    }
+    /* .studio--select--body i {
+        display: block;
+    } */
+    .photo--controls button{
+        box-shadow: 0 1px 3px 0 #1c1b1f !important;
+        border: 1px solid #fff !important;
+        color: #4f85da !important;
+    }
+    /* #vanta--background {
+        display: none !important;
+    } */
+    /* body {
+        background-color: #e2e2e2 !important;
+    } */
+    button {
+        line-height: 45px !important;
+    }
+    /* .button {
+        background-color: #1c1b1f !important;
+    } */
+    /* .studio--options {
+        background-color: #1c1b1f;
+        justify-content: space-between !important;
+    } */
+    .project--preview--case {
+        width: 95vw;
+    }
+    #studio--dimension--image {
+        width: 100%;
+    }
+}
+@media(max-width:375px) {
+    /* .studio--tattoo {
+        margin-top: 0px !important;
+    } */
+}

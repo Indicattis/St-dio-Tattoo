@@ -1,0 +1,195 @@
+/*========================BUTTONS=========================*/
+button {
+    cursor: pointer;
+    min-width: 60px;
+    font-size: 16px;
+    padding: 0px 20px 0px 20px; 
+    border-radius: 3px;   
+    border: 1px solid #e2e2e2;
+    text-align: center;
+    margin: 5px;
+    line-height:33px;
+}
+button:hover {
+    background: #1c1b1f !important; 
+    border: 1px solid #e2e2e2;
+    color: #fff !important;
+    transition: all 0.2s;
+}
+button.checked {
+    background: #da4f85 !important; 
+    border: 1px solid #e2e2e2 !important;
+    color: #fff !important;
+    transition: all 0.2s !important;
+}
+.button img {
+    max-width: 20px;
+    display: flex;
+    padding: 5px 5px 5px 5px;
+}
+
+.button {
+    color: #1c1b1f;
+    border: 1px solid #e2e2e2;
+    background-color: transparent;
+}
+.button--submit {
+    color: #fff;
+    background-color: #4f85da;
+}
+.button--download {
+    color: #fff;
+    background-color: #4fdaa4;
+}
+.button--alert {
+    color: #fff;
+    background-color: #daa44f;
+}
+input[type='range'] {
+    cursor:e-resize;
+    font-size: 22px;
+  }
+  
+  input[type='range'],
+  input[type='range']::-webkit-slider-runnable-track,
+  input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+  
+  /** 
+   * Use o pseudo-seletor "::-webkit-slider-runnable-track" para customizar o "trilho" do campo.
+   */
+  input[type='range']::-webkit-slider-runnable-track {
+    width: 50px;
+    height: 9px;
+    border-radius: 5px;
+    background: #fff;
+  }
+  
+  /** 
+   * Use o pseudo-seletor "::-webkit-slider-thumb" para customizar o "seletor" do campo.
+   */
+  input[type='range']::-webkit-slider-thumb {
+    width: 6px;
+    height: 18px;
+    margin-top: -5px;
+    background-color: #4f85da;
+    border-radius: 5px;
+  }
+
+
+select {
+    outline: none;
+    border: 1px solid #e2e2e2;
+    border-radius: 3px;
+    padding: 5px 20px 5px 20px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: transparent;
+}
+select option {
+    background-color: rgba(255, 255, 255, 0);
+    color: #1c1b1f60;
+}
+option:not(:checked) {
+    background-color: #14111ee1;
+    color: white;
+}
+option:checked {
+    background-color: #14111e;
+    color: white;
+}
+.label--green {
+    font-size: 2.2rem !important;
+    color: #4fdaa4 !important;
+}
+.i--submit {
+    color: #fff;
+    background-color: #4f85da;
+    cursor: pointer;
+    font-size: 22px;
+    padding: 0px 20px 0px 20px; 
+    border-radius: 3px;   
+    border: 1px solid #e2e2e2;
+    margin: 5px;
+    text-align: center;
+    line-height:35px !important; 
+    width: 60px;
+}
+.span--gold {
+    color: #cc3a00;
+    position: absolute;
+    transform: translate(80%);
+    margin-top: -5px;
+    cursor: pointer;
+}
+.tag--newsletter {
+    position: absolute !important;
+    color: white;
+    text-transform: uppercase;
+    top: 0;
+    padding: 5px 20px 5px 20px;
+    font-size: 1.6rem;
+    background-color: #daa44f;
+    border: 1px solid #1c1b1f;
+    border-radius: 3px;
+    transform: translate(-25%,-25%);
+}
+.tag--newsletter.white {
+    position: absolute !important;
+    color: white;
+    text-transform: uppercase;
+    top: 0;
+    padding: 5px 20px 5px 20px;
+    font-size: 1.6rem;
+    background-color: #daa44f;
+    border: 1px solid white;
+    border-radius: 3px;
+    transform: translate(-10%,-25%);
+    z-index: 2;
+}
+
+
+/* ================================INPUT====================================== */
+
+input[type=date] {
+    border: 1px solid #e2e2e2;
+    font-size: 1.8rem;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+    color: #6e6e6e;
+    font-family: sans-serif;
+    text-align: left;
+}
+.input--text {
+    border: 1px solid #e2e2e2;
+    border-radius: 3px;
+}
+.input--text.blocked {
+    background-color: #f0f0f0;
+}
+.input--date {
+    font-size: 1.6rem !important;
+    border: 1px solid #e2e2e2 !important;
+    border-radius: 3px !important;
+}
+.input--mirror {
+    color: white;
+}
+
+.select--small {
+    border: 1px solid #e2e2e2;
+    border-radius: 3px;
+    padding: 0 !important;
+    color: #1c1b1f;
+    font-size: 1.4rem;
+    cursor: pointer;
+    background-color: transparent;
+    width: 100%;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: invert(0.8) brightness(100%) sepia(0%) saturate(10000%) hue-rotate(20deg);
+  }

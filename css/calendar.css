@@ -1,0 +1,270 @@
+
+#calendar {
+    padding-top: 120px;
+}
+#calendar--header {
+    width: 40vw;
+    height: 80px;
+    display: flex;
+    font-size: 2.4rem;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 1px solid #e2e2e2;
+}
+#calendar--header i {
+    font-size: 2.6rem;
+    padding: 10px;
+    color: #1c1b1fd0;
+}
+#calendar--days {
+    border: 0px; 
+    border-spacing: 25px; 
+    border-collapse: separate;
+}
+#calendar--days thead tr td {
+    border: none;
+}
+#calendar--days td {
+    padding: 15px;
+    text-align: center;
+    font-size: 1.6rem;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#calendar--days tbody td:hover {
+    background-color: #4f85da;
+    color: white;
+    box-shadow: 0 1px 5px 0 #e2e2e2;
+    transition: .2s;
+}
+#calendar--days .today {
+    background-color:  #da4f85;
+    color: white;
+}
+#calendar--days .prev--month, .next--month {
+    opacity: 0.3;
+}
+#calendar--current--year {
+    display: flex;
+    justify-content: center;
+    font-size: 3.4rem;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    width: 30vw;
+    font-family: sans-serif;
+}
+#calendar--days tbody td.select {
+    background-color: #4f85da;
+    color: white;
+    box-shadow: 0 1px 5px 0 #e2e2e2;
+    transition: .2s;
+}
+/*================================================ MODAL PARA AGENDAMENTO============================================ */
+#modal--scheduling {
+    background-color: #1c1b1fbd;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    overflow: hidden;
+    width: 500px;
+    box-shadow: 0 1px 5px 0 #e2e2e2;
+}
+
+#modal--scheduling--bakground {
+    background-color: #1c1b1fb0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    animation: animation-1 0.2s;
+    z-index: 2002;
+    display: none;
+}
+#modal--scheduling--bakground.show {
+    display: block;
+}
+#modal--scheduling--close {
+    position: absolute;
+    font-size: 20px;
+    top: 5px;
+    right: 5px;
+    padding: 5px;
+    color: white;
+    cursor: pointer;
+}
+#modal--scheduling form {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    align-items: center;
+}
+#modal--scheduling legend {
+    color: white;
+    font-size: 22px;
+    line-height: 40px;
+    width: 100%;
+    text-align: center;
+}
+#modal--scheduling form label {
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    line-height: 40px;
+}
+#calendar--current--date {
+    width: 150px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    border: 1px solid #e2e2e2;
+    font-size: 18px;
+    padding: 15px 3rem;
+}
+#modal--scheduling form input[type=text],input[type=tel]{
+    border: none;
+    border-bottom: 1px solid #e2e2e2;
+    background-color: transparent !important;
+    line-height: 30px;
+    outline: none;
+    color: white !important;
+    width: 100%;
+}
+#modal--scheduling form input[type=radio] {
+    opacity: 0;
+}
+.radio--ico {
+    font-size: 40px;
+    cursor: pointer;
+    border: 1px solid #e2e2e2;
+    padding: 10px 0px;
+    width: 60px;
+    border-radius: 5px;
+    transition: all 0.3s;
+    transform: translateX(8px);
+}
+#radio--ico--1.selected {
+    background-color: #da4f85;
+    transition: all 0.3s;
+}
+#radio--ico--2.selected {
+    background-color: #da4f85;
+    transition: all 0.3s;
+}
+#radio--ico--3.selected {
+    background-color: #da4f85;
+    transition: all 0.3s;
+}
+#projectSend {
+    display: none;
+}
+
+#scheduling--select--body {
+    outline: none;
+    border: 1px solid #e2e2e2;
+    padding: 7px 10px 7px 10px;
+    color: #6e6e6e;
+    font-size: 14px;
+    cursor: pointer;
+    width: 85%;
+    background-color: white;
+    margin-top: 5px;
+}
+#scheduling--select--body option {
+    background-color: rgba(255, 255, 255, 0);
+    color: #1c1b1f60;
+}
+#fotopreview {
+    max-width: 90%;
+    height: 100px;
+    text-align: center;
+    border: 1px dashed #e2e2e2;
+    display: none;
+    margin: 10px;
+}
+@media(max-width:630px) {
+    #modal--scheduling {
+        width: 100%;
+    }
+    #modal--scheduling form {
+        height: 80vh;
+    }
+    #calendar--days {
+        border-spacing: 8px; 
+    }
+    #fotopreview {
+        height: 150px;
+    }
+}
+@media(max-width:425px) {
+    #calendar--days {
+        border-spacing: 2px; 
+    }
+}
+
+#modal--scheduling form section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0px;
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    justify-content: space-evenly;
+    transition: all 0.3s;
+}
+#modal--scheduling form section div {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+#calendar--info--day span {
+    color: white;
+    margin: 0px 15px -20px 15px;
+    font-size: 14px;
+}
+#calendar--info--user {
+    transform: translateX(600px);
+    transition: all 0.3s;
+}
+#calendar--info--tattoo{
+    transform: translateX(1200px);
+    transition: all 0.3s;
+}
+.calendar--dots {
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+    text-align: center;
+    font-size: 1rem;
+    color: #e2e2e2;
+    position: absolute;
+    bottom: 12px;
+}
+.calendar--dots i {
+    cursor: pointer;
+}
+.calendar--button {
+    cursor: pointer;
+    font-size: 14px;
+    background-color: #4f85da;
+    padding: 5px 20px;
+    position: absolute;
+    bottom: 40px;
+    color: white;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+}
+#submit_1 {
+    position: absolute;
+    bottom: -60px;
+}

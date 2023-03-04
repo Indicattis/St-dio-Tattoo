@@ -1,0 +1,237 @@
+body {
+    overflow: hidden;
+}
+
+.dashboard--content {
+    padding-top: 120px;
+}
+
+.dashboard--request--panel {
+    position: relative;
+}
+/* ==============BOTÃO DE ALTERAÇÃO NO PAINEL DE REQUICIÇÕES =================== */
+.dashboard--change {
+    border: 1px solid #e2e2e2;
+    width: 150px;
+    height: 30px;
+    border-radius: 50px;
+    font-size: 2rem;
+    color: #1c1b1f;
+    background-color: #1c1b1f;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #e2e2e2;
+    display: flex;
+    align-items: center;
+    color: #1c1b1f;
+}
+.dashboard--change--toggle {
+    background-color: white;
+    border-radius: 50px;
+    width: 50%;
+    text-align: center;
+    position: absolute;
+    box-shadow: 0px 1px 4px 0px rgb(202, 202, 202);
+    z-index: 2;
+    transition: all 0.3s;
+    height: 30px;
+}
+.dashboard--change--toggle.change {
+    transform: translateX(100%);
+    transition: all 0.3s;
+}
+.dashboard--change--calendar {
+    background-color: white;
+    border-radius: 50px;
+    width: 50%;
+    text-align: center;
+    position: absolute;
+    box-shadow: 0px 1px 4px 0px rgb(202, 202, 202);
+    z-index: 1;
+}
+.option {
+    z-index: 10;
+}
+#change--list {
+    color: #1c1b1f;
+    transition: all 0.3s;
+}
+#change--list.change {
+    color: white;
+    transition: all 0.3s;
+}
+#change--calendar {
+    color: white;
+    transition: all 0.3s;
+}
+#change--calendar.change {
+    color: #1c1b1f;
+    transition: all 0.3s;
+}
+/* =================================ITEM DE REQUISIÇÃO ====================================== */
+
+.request--list {
+    transition: all 0.3s;
+    width: 100%;
+    border: 0px; 
+    text-align: center;
+    border-spacing: 0 1em;
+    border-collapse: separate;
+    margin-top: 30px;
+}
+.request--list tr {
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #e2e2e2;
+    box-shadow: 0 1px 5px 0 #e2e2e2;
+}
+.request--list td {
+    width: 20%;
+    padding: 10px;
+}
+.request--list td input {
+    width: 100%;
+}
+.request--list.change {
+    transform: translateX(-2000px);
+    transition: all 0.5s;
+}
+.request--item--list {
+    font-size: 1.4rem;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    line-height: 60px;
+    background-color: white;
+    margin-top: 10px;
+    z-index: 2;
+}
+.request--item--edit td {
+
+    line-height: 30px;
+}
+.request--item--header {
+    font-size: 1.6rem;
+}
+/* =============================CALENDARIO============================== */
+#request--calendar {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    transform: translateX(2000px);
+    transition: all 0.5s;
+}
+#request--calendar.change {
+    transform: translateX(0);
+    transition: all 0.5s;
+}
+#dashboard--calendar--header {
+    width: 40vw;
+    height: 80px;
+    display: flex;
+    font-size: 2rem;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 1px solid #e2e2e2;
+}
+#dashboard--calendar--header i {
+    font-size: 2.2rem;
+    padding: 10px;
+    color: #1c1b1fd0;
+}
+#dashboard--calendar--days {
+    border: 0px; 
+    border-spacing: 15px; 
+    border-collapse: separate;
+    background-color: #fff;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+}
+#dashboard--calendar--days thead tr td {
+    border: none;
+}
+#dashboard--calendar--days td {
+    padding: 15px;
+    text-align: center;
+    font-size: 1.6rem;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#dashboard--calendar--days tbody td:hover {
+    background-color: #4f85da;
+    color: white;
+    box-shadow: 0 1px 5px 0 #e2e2e2;
+    transition: .2s;
+}
+#dashboard--calendar--days .today {
+    background-color:  #da4f85;
+    color: white;
+}
+#dashboard--calendar--days .prev--month, .next--month {
+    opacity: 0.3;
+}
+#dashboard--calendar--current--year {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    font-size: 3rem;
+    border-bottom: 1px solid #e2e2e2;
+    width: 30vw;
+    font-family: sans-serif;
+}
+#calendar--days tbody td.select {
+    background-color: #4f85da;
+    color: white;
+    box-shadow: 0 1px 5px 0 #e2e2e2;
+    transition: .2s;
+}
+/* INFORMAÇÕES DE ITEM */
+.request--item--edit {
+    display: none;
+    background-color: rgb(252, 252, 252) !important;
+}
+.request--item--edit.show {
+    display: table-row;
+    transition: all 0.4s;
+}
+.request--item--edit ul {
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+#request--waiting {
+    background-color: white;
+    width: 300px;
+    position: fixed;
+    top: -500px;
+    left: 40%;
+    z-index: 2002;
+    box-shadow: 0 1px 5px 0 #e2e2e2;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.4rem;
+    border: 1px solid #4fdaa4;
+}
+#request--waiting.load {
+    top: 0px;
+    transition: all 0.4s;
+}
+#request--waiting legend {
+    color: #4fdaa4;
+    font-size: 1.6rem;
+}
+.request--waiting--button {
+    width: 60px;
+}
+.request--waiting--info {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
